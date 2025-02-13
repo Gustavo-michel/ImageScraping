@@ -20,7 +20,7 @@ def download_images(query, num_images):
     """
 
     # Create dir
-    folder_name = query.replace(" ", "_")
+    folder_name = os.path.join("data", query.replace(" ", "_"))
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
 
